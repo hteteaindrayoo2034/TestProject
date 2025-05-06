@@ -17,6 +17,7 @@ public class Main {
         }catch (ClassNotFoundException ce){
             System.out.println(ce.getMessage());
         }
+
         catch (SQLException se) {
             se.printStackTrace();
         }catch(Exception e){
