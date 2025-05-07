@@ -31,13 +31,20 @@ public class Main {
 
         Main m = new Main();
         Connection con = m.get_Db_Connection();
+        // statement
+        Database_Read dr = new Database_Read(con);
+        dr.read();
+
         try{
             con.close();
         }catch (Exception ex){
             ex.printStackTrace();
         }
         // connection
-        // statement
+
+
+
+
         // Resultset 1 ka ny sa tr
         // close
 
