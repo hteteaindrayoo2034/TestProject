@@ -1,0 +1,15 @@
+services:
+  # Application Dockerfile is in same folder which is .
+  app:
+    build: .
+  #root directory htl ka docker ko run mhr
+
+  # db is is db folder
+  db:
+    build: database/.
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33060:3306"
